@@ -240,5 +240,6 @@ def checkDatabaseAndSendConfirmation(request):
     orders = order_model.objects.fiter(status="UNDELIVERED",exprected_delivery_time__lt=time_threshold,isRestaurantNotified=False)
     for data in orders:
             #check live status and see if train is comming in next 2.5 hours or not and update db 
+            print "nsdn"
     return True
 
