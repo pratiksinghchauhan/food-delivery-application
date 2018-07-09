@@ -9,4 +9,7 @@ class order_model(models.Model):
     pnr = models.CharField(max_length=200)
     delivery_station_code = models.CharField(max_length=200)
     train_number = models.CharField(max_length=200)
+    status = models.CharField(max_length=200)
+    exprected_delivery_time = models.DateTimeField()
+    isRestaurantNotified = models.BooleanField(default=False)
     ts = models.DateTimeField(auto_now_add=True)
